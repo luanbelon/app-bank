@@ -1,0 +1,238 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #fff;
+    font-family: poppins;
+}
+
+body{ background: #070619; }
+
+section{ padding: 0 0 0 2rem; }
+
+.lock-app{ position: relative; }
+
+.lock-app img{
+    position: absolute;
+    width: 1.7rem;
+    top: -40;
+    right: 0;
+    margin: 1rem;
+}
+
+.container-user-data{
+    height: 20vh;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    align-content: center;
+    padding: 3rem
+
+}
+.container-user-data .avatar{ grid-column: 1; }
+.container-user-data #user-photo{ width: 70%; }
+
+.container-user-data .user-account-data{
+    grid-column: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.user-account-data h1{
+    font-size: 1.8rem;
+    width: 100%;
+}
+
+.user-account-data div{
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+.user-account-data img{ width: 10%; }
+
+.user-account-data span{
+    font-size: .9rem;
+    font-weight: bold;
+}
+
+.bank-menu{
+    display: flex;
+    height: 8vh;
+    justify-content: center;
+    text-align: center;
+    align-items: flex-end;
+}
+
+ul.menu{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    font-weight: 500;
+}
+
+/* Content areas*/
+.account-summary, 
+.account-cashback,
+.account-statistics{
+    margin: 2rem 0;
+    width: 100%;
+}
+
+.account-summary-content, 
+.account-cashback-content,
+.account-statistics-content{
+    padding: 1rem 0 1rem 3rem;
+    border-radius: 3rem 0 0 3rem;
+    position: relative;
+    right: 0;
+}
+
+.account-summary-content h1, 
+.account-cashback-content h1,
+.account-statistics-content h1{
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+
+/* SUMMARY */
+.account-summary-content{ background: #4372F0; }
+
+.account-summary-content-balance{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2rem 0 0;
+}
+
+.account-summary-content-balance p{
+    font-size: .9rem;
+    font-weight: 200;
+    margin: .5rem 0;
+}
+
+
+.account-summary-content-balance span{
+    font-size: .9rem;
+    font-weight: 700;
+    color: yellow;
+    margin-left: 2rem;
+}
+/* CASHBACK */
+
+.account-cashback-content{ background: #8552EA; }
+
+.account-cashback-content h1 span{ font-weight: 200; }
+
+.account-cashback-content progress{
+    height: .5rem;
+    -webkit-appearance: none;
+}
+
+.account-cashback-content progress::-webkit-progress-bar{
+    background: #fff;
+    border-radius: 2rem;
+}
+
+.account-cashback-content progress::-webkit-progress-value{
+    background: rgb(81,163,233);
+    background: linear-gradient(90deg, rgb(127, 224, 253) 0%, rgb(255, 36, 222) 100%);
+    border-radius: 2rem;
+}
+
+.account-cashback-content-itens{
+    display: flex;
+    justify-content: space-between;
+    padding: .5rem 2rem .5rem 0;
+}
+
+.account-cashback-content-cashback-item p{ font-weight: bold; }
+
+.account-cashback-content-cashback-item span{
+    font-weight: 300;
+    font-size: .7rem;
+}
+
+.account-statistics-content{ background: #621CEF; }
+
+.account-statistics-content-itens{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: space-between;
+    align-items: end;
+}
+
+.account-statistics-content-item p{ font-weight: 800; }
+
+.account-statistics-content-item span{
+    font-weight: 300;
+    font-size: .7rem;
+}
+
+.account-statistics-content-item img{ width: 50%; }
+
+.statistics-chart{text-align: center}
+
+@media (min-width: 768px){
+
+    main{
+        padding: 2rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        position: relative;
+    }
+
+    .lock-app {
+        position: absolute;
+        top: 2rem;
+        right: 2rem;
+    }
+
+    .container-user-data {
+        height: 20vh;
+        grid-template-columns: 1fr 3fr;
+        padding: 0;
+    }
+
+    .container-user-data{
+        margin-top: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .user-account-data img { width: 5%;}
+
+    .container-user-data #user-photo { width: 100px; }
+    
+    .user-account-data div{ justify-content: center; }
+
+    .bank-menu {
+        height: 10vh;
+        margin: 2rem 0;
+        width: 100%;
+        padding: 0;
+    }
+
+    ul.menu { gap: 10rem; }
+
+    .container-app{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 3rem;
+    }
+
+    .account-summary, .account-cashback, .account-statistics{
+        max-height: 200px;
+        padding:0;
+    }
+
+    .account-summary-content, .account-cashback-content, .account-statistics-content{
+        border-radius: 1rem;
+        height: 200px;
+    }
+}
